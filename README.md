@@ -1,50 +1,59 @@
-# Exam Assistant Web App
+# Exam Assistant
+
+A modern web application for rapid exam preparation, powered by AI. Exam Assistant enables students to upload PDF study materials and receive concise, exam-focused explanations, mnemonics, and must-know formulas—instantly and beautifully presented.
+
+## Features
+- **PDF Upload & Parsing:** Upload your study notes in PDF format (up to 15MB) and view them in a full-featured, modern document viewer.
+- **AI-Powered Simplification:** Instantly generate simplified explanations, mnemonics, and key formulas for any page using the Gemini API.
+- **Intuitive Navigation:** Effortlessly navigate, zoom, and fit-to-width/page with sticky, visually grouped controls.
+- **Clean, Responsive UI:** Built with React and Tailwind CSS for a seamless experience on any device.
+- **No Authentication Required:** Start using the app immediately—no sign-up or login needed.
 
 ## Tech Stack
-- **Frontend:** React.js + Tailwind CSS
-- **Document Parsing:** pdf-lib.js (PDF)
-- **AI Engine:** Gemini API (free tier)
-- **Hosting:** Vercel (free tier)
+- **Frontend:** React.js, Tailwind CSS
+- **Document Parsing:** pdf-lib.js, pdfjs-dist
+- **AI Engine:** Gemini API (Google)
 - **UI Components:** react-dropzone, react-pdf
+- **Hosting:** Vercel (recommended)
 
-## Core Functionality Workflow
-- File upload and processing (PDF only)
-- Document viewer with navigation and zoom
-- Explanation panel with AI-powered simplification
-- Gemini API integration for text/image analysis
-- Error handling and user feedback
 
-## Project Structure
+
+## Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v16+ recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- Gemini API key (obtain from Google)
+
+### Installation
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/YOUR_USERNAME/exam-assistant.git
+   cd exam-assistant
+   ```
+2. **Install dependencies:**
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
+3. **Configure environment variables:**
+   - Create a `.env` file in the root directory.
+   - Add your Gemini API key:
+     ```env
+     VITE_GEMINI_API_KEY=your_gemini_api_key_here
+     ```
+
+### Running Locally
+```sh
+npm run dev
+# or
+yarn dev
 ```
-Exam-Assistant/
-│
-├── public/                  # Static assets
-│   └── ...
-├── src/
-│   ├── components/          # Reusable UI components
-│   │   ├── DocumentViewer/
-│   │   ├── ExplanationPanel/
-│   │   ├── FileDropzone/
-│   │   └── ...
-│   ├── utils/               # Utility functions (parsing, API, etc.)
-│   ├── api/                 # Gemini API integration
-│   ├── App.jsx              # Main app entry
-│   ├── index.js             # React entry point
-│   └── index.css            # Tailwind CSS imports
-├── .env                     # Environment variables (Gemini API key)
-├── tailwind.config.js       # Tailwind CSS config
-├── postcss.config.js        # PostCSS config
-├── package.json             # Project dependencies and scripts
-└── README.md                # Project overview (this file)
-```
+Visit [http://localhost:5173](http://localhost:5173) in your browser.
 
-## Setup
-1. Clone the repo
-2. Install dependencies: `npm install`
-3. Add your Gemini API key to `.env`
-4. Run locally: `npm run dev`
-5. Deploy on Vercel (free tier)
+
+## License
+This project is licensed under the MIT License.
 
 ---
-
-Proceed to implement the file structure as described above. 
